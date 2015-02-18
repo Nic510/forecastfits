@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%=stylesheet_link_tag 'application', media: 'all'%>
     <%=javascript_include_tag 'application' %>
@@ -14,7 +13,8 @@
 <body>
   <header>
     <img src="/images/small-2137-3489992.png" alt="logo">
-    <a href="<%= root_url %>"><h1 class="main-title">Forecast Fits</h1></a>
+    <a href="<%= root_url %>">
+    <h1 class="main-title">Forecast Fits</h1></a>
     <hr>
     <h2>Make sure the forecast fits what you're wearing.</h2>
 
@@ -49,7 +49,19 @@
 
   <%=yield %>
 
-    <%=render "layouts/partials/footer" %>
+  <footer>
+  <h5> Nicholas Boutte </h5>
+  
+  <hr>
+
+  <a href="https://github.com/Nic510"> 
+    <img class="link-icons" src ="/images/github-thumbnail.jpg">
+  </a>
+  
+  <a href="www.linkedin.com/in/nicboutte/en"> 
+    <img class="link-icons" src ="/images/linkedin-thumbnail.jpg">
+  </a>
+</footer>
 
 </body>
 

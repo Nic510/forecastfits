@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
 #define root to location controller with the search method
 root 'location#search'
 
