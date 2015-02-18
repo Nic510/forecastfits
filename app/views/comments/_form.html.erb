@@ -1,0 +1,47 @@
+<div class="comment-list">
+  <% @location.comments.each do |comment| %>
+
+    <%=render partial: "comments/comment", locals: {comment: comment} %>
+
+      <% end %>
+</div>
+
+
+<div class="comment-form">
+  <h1>What are you wearing in this weather?</h1>
+  <%= form_for :comment, url: comment_url(id: @location), html: {class: 'submit-comment'} do |f| %>
+    <p class="comment-name">
+      <%=f.label :name %>
+        <br>
+        <%=f.text_field :commenter %>
+    </p>
+    <p class="comment-jacket">
+      <%=f.label :jacket %>
+        <br>
+        <%=f.text_field :jacket %>
+    </p>
+    <p class="comment-top">
+      <%=f.label :top %>
+        <br>
+        <%=f.text_field :top %>
+    </p>
+    <p class="comment-pants">
+      <%=f.label :pants %>
+        <br>
+        <%=f.text_field :pants %>
+    </p>
+    <p class="comment-shoes">
+      <%=f.label :shoes %>
+        <br>
+        <%=f.text_field :shoes %>
+    </p>
+    <p class="comment-body">
+      <%=f.label :comment %>
+        <br>
+        <%=f.text_area :body %>
+    </p>
+    <p class="submit">
+      <%=f.submit 'Submit' %>
+    </p>
+    <% end %>
+</div>

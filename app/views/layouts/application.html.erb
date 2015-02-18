@@ -1,14 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Forecastfits</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
 
-<%= yield %>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%=stylesheet_link_tag 'application', media: 'all'%>
+    <%=javascript_include_tag 'application' %>
+      <%=csrf_meta_tags %>
+        <title>Forecast Fits</title>
+</head>
+
+<body>
+  <header>
+    <img src="/images/small-2137-3489992.png" alt="logo">
+    <a href="<%= root_url %>"><h1 class="main-title">Forecast Fits</h1></a>
+    <hr>
+    <h2>Make sure the forecast fits what you're wearing.</h2>
+
+    <div class="wrapper">
+      <div class="location-page">
+
+        <div class="location-form">
+          <h1> Where are you? </h1>
+
+          <%=form_for :location, url: submit_url, html: {class: 'search-form'} do |f| %>
+
+            <p class="city-input">
+              <%=f.label :City %>
+                <%=f.text_field :city %>
+            </p>
+
+            <p class="state-input">
+              <%=f.label :State %>
+                <%=f.select :state, options_for_select(us_states, "CA") %>
+            </p>
+
+            <p class="submit">
+              <%=f.submit 'Search' %>
+            </p>
+            <% end %>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+  <%=yield %>
+
+    <%=render "layouts/partials/footer" %>
 
 </body>
+
 </html>

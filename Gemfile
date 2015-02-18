@@ -42,13 +42,18 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'sqlite3', group: :development
+group :development, :test do
 
+gem 'sqlite3'
+
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring'
+
+group :production do
 # Use Postgres for Heroku production
-gem 'pg', group: :production
+gem 'pg'
 
 # Rails refactor gem for Heroku
-gem 'rails_12factor', group: :production
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring', group: :development
-
+gem 'rails_12factor'
+end
+end
