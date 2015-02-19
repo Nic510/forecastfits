@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-	has_many :comments
-	validates :city, :state, presence: true
+  has_many :comments
+  validates :city, :state, presence: true
 
 end

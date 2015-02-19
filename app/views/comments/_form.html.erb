@@ -6,7 +6,7 @@
       <% end %>
 </div>
 
-
+<% if user_signed_in? %>
 <div class="comment-form">
   <h1>What are you wearing in this weather?</h1>
   <%= form_for :comment, url: comment_url(id: @location), html: {class: 'submit-comment'} do |f| %>
@@ -45,3 +45,8 @@
     </p>
     <% end %>
 </div>
+<% else %>
+<h2>Login or Sign-up to comment</h2>
+ <center><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %></center>
