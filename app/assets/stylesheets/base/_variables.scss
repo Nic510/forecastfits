@@ -1,4 +1,4 @@
-// Color Palette 
+// Color Choices
 
 $white : #fff;
 $light-gray: #DDD;
@@ -15,29 +15,29 @@ $light-gray: #E3EDEF;
 $black: #1F181E;
 $purple: #C299FF;
 
-// Color Scheme
+// Web page Color Scheme
 
-$primary-color: $light-blue;
+$primary-color: $blue;
 $primary-color-dark: $dark-blue;
-$primary-color-light: lighten(#6a8189, 47);
+$primary-color-light: lighten(#B5D5CA, 47);
 $secondary-color: $black;
 $accent-color: $purple;
 
-// Background Color
+// Background
 $base-background-color: white;
 
-// Font Colors
+// Font
 $base-font-color: $dark-gray;
 $base-accent-color: $purple;
 
-// Typography
+// Type-Setting
 $sans-serif: $helvetica;
 $serif: $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
 // Sizes
-$base-font-size: 1em;
+$base-font-size: 1.25em;
 $base-line-height: $base-font-size * 1.5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); 
 $header-line-height: $base-font-size * 1.25;
@@ -49,8 +49,8 @@ $hover-link-color: darken($base-accent-color, 15);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
-// Border color
-$base-border-color: $light-gray;
+// Border
+$base-border-color: $dark-gray;
 
 
 // Forms
