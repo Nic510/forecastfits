@@ -1,5 +1,6 @@
 body {
 	background: $white;
+	// Picture of Hills
 	@include background-image(url("/images/post-12710-092492400 1282992812.png"));
 	background-position: center, center;
 	background-repeat: repeat;
@@ -32,6 +33,7 @@ p {
 	}
 
 	.weather-result {
+		// Results background
 		@include background-image(url("/images/002-subtle-light-pattern-background-texture.jpg"));
 		background-position: center, center;
 		font-size: 2em;

@@ -7,6 +7,15 @@
   <%=stylesheet_link_tag 'application', media: 'all'%>
     <%=javascript_include_tag 'application' %>
       <%=csrf_meta_tags %>
+      <!-- Upload Care -->
+    <script>
+    UPLOADCARE_PUBLIC_KEY = 'ee8a283813875df8d7c6';
+    UPLOADCARE_IMAGES_ONLY = true;
+    UPLOADCARE_PREVIEW_STEP = true;
+</script>
+
+<script charset="utf-8" src="https://ucarecdn.com/widget/2.0.2/uploadcare/uploadcare.full.min.js"></script>
+
         <title>Forecast Fits</title>
 </head>
 
@@ -32,9 +41,7 @@
   </center>
     </div>
     <img src="/images/small-2137-3489992.png" alt="logo">
-    <a href="<%= root_url %>">
       <h1 class="main-title">Forecast Fits</h1>
-    </a>
     <hr>
     <h2>Make sure the forecast fits what you're wearing.</h2>
 

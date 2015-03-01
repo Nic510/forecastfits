@@ -34,6 +34,8 @@ gem 'turbolinks'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
+# Photo upload
+gem 'uploadcare-rails', "~> 1.0"
 
 gem 'neat'
 

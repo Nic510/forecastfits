@@ -21,7 +21,8 @@
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
-@import "bootstrap";	
+@import "bootstrap";
+// bootstap variables	
 @import "base/variables";
 @import "base/forms";
 @import "base/global";
