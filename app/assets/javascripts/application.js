@@ -77,5 +77,28 @@ $(document).ready(function() {
         });
       }
     });
+    function installWidgetPreviewSingle(widget, img) {
+      widget.onChange(function(file) {
+        img.css('visibility', 'hidden');
+        img.attr('src', '');
+        if (file) {
+          file.done(function(fileInfo) {
+            var size = '' + (img.width() * 2) + 'x' + (img.height() * 2);
+            var previewUrl = fileInfo.cdnUrl + '-/scale_crop/' + size + '/center/';
+            img.attr('src', previewUrl);
+            img.css('visibility', 'visible');
+          }); 
+        }
+      });
+    }
+     
+    afterOnLoad(function() {
+      $('.image-preview-single').each(function() {
+        installWidgetPreviewSingle(
+          uploadcare.Widget($(this).children('input')),
+          $(this).children('img')
+        );
+      });
+    });
   });
 });

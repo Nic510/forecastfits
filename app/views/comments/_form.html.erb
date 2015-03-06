@@ -19,33 +19,28 @@
       <%=f.label :jacket %>
         <br>
         <%=f.text_field :jacket %>
-        <input type="hidden" role="uploadcare-uploader"
-    data-image-shrink="1024x1024 100%"
-    data-crop="" />
     </p>
     <p class="comment-top">
       <%=f.label :top %>
         <br>
         <%=f.text_field :top %>
-        <input type="hidden" role="uploadcare-uploader"
-    data-image-shrink="1024x1024 100%"
-    data-crop="" />
     </p>
     <p class="comment-pants">
       <%=f.label :pants %>
         <br>
         <%=f.text_field :pants %>
-        <input type="hidden" role="uploadcare-uploader"
-    data-image-shrink="1024x1024 100%"
-    data-crop="" />
     </p>
     <p class="comment-shoes">
       <%=f.label :shoes %>
         <br>
         <%=f.text_field :shoes %>
-        <input type="hidden" role="uploadcare-uploader"
-    data-image-shrink="1024x1024 100%"
-    data-crop="" />
+    </p>
+    <p class="uploadcare-submit">
+    <%=f.label :picture %>
+      <br>
+      
+    <%= uploadcare_uploader_field :post, :file %>
+      <br>
     </p>
     <p class="comment-body">
       <%=f.label :comment %>
